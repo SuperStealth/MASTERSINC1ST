@@ -75,6 +75,13 @@
     <Compile Include="SettingsForm.Designer.cs">
       <DependentUpon>SettingsForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="SQL.cs" />
+    <Compile Include="SummForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SummForm.Designer.cs">
+      <DependentUpon>SummForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="TableForm.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -18,5 +18,7 @@ namespace ProjectX
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new MainForm());
         }
+
+        
     }
 }

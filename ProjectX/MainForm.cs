@@ -83,5 +83,7 @@ namespace ProjectX
             SettingsForm settingsForm = new SettingsForm();
             settingsForm.Show();
         }
+
+        public DateTime openingTime = DateTime.Now;
     }
 }
