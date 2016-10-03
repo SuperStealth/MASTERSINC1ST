@@ -1,11 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ProjectX
@@ -34,46 +29,15 @@ namespace ProjectX
             Button button = sender as Button;
             if (button != null)
             {
-                // now you know the button that was clicked
-                switch ((int)button.Tag)
-                {
-                    case 0:
-                        Debug.Write("0");
-                        break;
-                    case 1:
-
-                        break;
-                    case 2:
-
-                        break;
-                    case 3:
-
-                        break;
-                    case 4:
-
-                        break;
-                    case 5:
-
-                        break;
-                    case 6:
-
-                        break;
-                    case 7:
-
-                        break;
-                    case 8:
-
-                        break;
-                    case 9:
-
-                        break;
-                }
+                TableForm tableForm = new TableForm((int)button.Tag);
+                tableForm.Show();
             }
         }
 
         private void выдатьРасчетToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            SummForm summForm = new SummForm();
+            summForm.Show();
         }
 
         public int tablesQuantity;

@@ -12,9 +12,30 @@ namespace ProjectX
 {
     public partial class TableForm : Form
     {
-        public TableForm()
+        public TableForm(int tableNum)
         {
             InitializeComponent();
+            Text = (tableNum + 1).ToString() + " стол";
+        }
+
+        private void searchTextBox_TextChanged(object sender, EventArgs e)
+        {
+            //сделоть тут
+        }
+
+        private void addButton_Click(object sender, EventArgs e)
+        {
+            //сделоть тут
+        }
+
+        private void deleteButton_Click(object sender, EventArgs e)
+        {
+            //сделоть тут
+        }
+
+        private void closeTableButton_Click(object sender, EventArgs e)
+        {
+            //сделоть тут
         }
     }
 }

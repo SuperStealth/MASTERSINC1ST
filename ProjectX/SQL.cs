@@ -6,7 +6,7 @@ namespace COURSED
 {
     class Sql
     {
-        public static string _connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\5semestr\BD\COURSED\COURSED\Database1.mdf;Integrated Security=True";
+        public static string _connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=..\..\Drinks.mdf;Integrated Security=True";
         public void FillDataGridViewByQuery(DataGridView dgv, string query)
         {
             SqlConnection connection = new SqlConnection();
