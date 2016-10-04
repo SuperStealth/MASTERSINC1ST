@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.overallDataGridView = new System.Windows.Forms.DataGridView();
             this.tableDataGridView = new System.Windows.Forms.DataGridView();
             this.searchTextBox = new System.Windows.Forms.TextBox();
@@ -35,13 +36,27 @@
             this.addButton = new System.Windows.Forms.Button();
             this.deleteButton = new System.Windows.Forms.Button();
             this.closeTableButton = new System.Windows.Forms.Button();
+            this.drinksDataSet = new ProjectX.DrinksDataSet();
+            this.drinksTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.drinksTableTableAdapter = new ProjectX.DrinksDataSetTableAdapters.DrinksTableTableAdapter();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.overallDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tableDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.drinksDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.drinksTableBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // overallDataGridView
             // 
+            this.overallDataGridView.AutoGenerateColumns = false;
             this.overallDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.overallDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3});
+            this.overallDataGridView.DataSource = this.drinksTableBindingSource;
             this.overallDataGridView.Location = new System.Drawing.Point(12, 12);
             this.overallDataGridView.Name = "overallDataGridView";
             this.overallDataGridView.Size = new System.Drawing.Size(220, 254);
@@ -106,6 +121,40 @@
             this.closeTableButton.UseVisualStyleBackColor = true;
             this.closeTableButton.Click += new System.EventHandler(this.closeTableButton_Click);
             // 
+            // drinksDataSet
+            // 
+            this.drinksDataSet.DataSetName = "DrinksDataSet";
+            this.drinksDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // drinksTableBindingSource
+            // 
+            this.drinksTableBindingSource.DataMember = "DrinksTable";
+            this.drinksTableBindingSource.DataSource = this.drinksDataSet;
+            // 
+            // drinksTableTableAdapter
+            // 
+            this.drinksTableTableAdapter.ClearBeforeFill = true;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Id";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "DrinkType";
+            this.dataGridViewTextBoxColumn2.HeaderText = "DrinkType";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "Price";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Price";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
             // TableForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -120,8 +169,11 @@
             this.Controls.Add(this.overallDataGridView);
             this.Name = "TableForm";
             this.Text = "TableForm";
+            this.Load += new System.EventHandler(this.TableForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.overallDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tableDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.drinksDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.drinksTableBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -136,5 +188,14 @@
         private System.Windows.Forms.Button addButton;
         private System.Windows.Forms.Button deleteButton;
         private System.Windows.Forms.Button closeTableButton;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn drinkTypeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn;
+        private DrinksDataSet drinksDataSet;
+        private System.Windows.Forms.BindingSource drinksTableBindingSource;
+        private DrinksDataSetTableAdapters.DrinksTableTableAdapter drinksTableTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
     }
 }
