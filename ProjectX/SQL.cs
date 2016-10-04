@@ -6,7 +6,10 @@ namespace ProjectX
 {
     class Sql
     {
-        public static string _connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=E:\ProjectX\MASTERSINC1ST\ProjectX\Drinks.mdf;Integrated Security=True";
+        //Поменяй строку когда будешь работать
+       // public static string _connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=E:\ProjectX\MASTERSINC1ST\ProjectX\Drinks.mdf;Integrated Security=True";
+        public static string _connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\nGadget\Documents\GitHub\MASTERSINC1ST\ProjectX\Drinks.mdf;Integrated Security=True";
+
         public void FillDataGridViewByQuery(DataGridView dgv, string query)
         {
             SqlConnection connection = new SqlConnection();

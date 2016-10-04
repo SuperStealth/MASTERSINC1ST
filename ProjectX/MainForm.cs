@@ -16,6 +16,7 @@ namespace ProjectX
             for (int i = 0; i < tablesQuantity; i++)
             {
                 Button button = new Button();
+                button.BackColor = Color.Gray;
                 button.Location = new Point(10 + 100*i - 500*(i/5), 80 * (i/5) + 50);
                 button.Text = (i+1).ToString();
                 button.Click += new EventHandler(ButtonClickOneEvent);

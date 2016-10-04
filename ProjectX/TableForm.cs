@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ProjectX
@@ -20,11 +13,13 @@ namespace ProjectX
             InitializeComponent();
             Text = (tableNum + 1).ToString() + " стол";
             _sqlWork.FillDataGridViewByQuery(tableDataGridView, "SELECT d.DrinkType, d.Price, s.DrinkID, s.Count FROM SummTable s JOIN DrinksTable d ON s.DrinkID = d.Id");
+            tableDataGridView.Columns[0].HeaderText = "Напиток";
+            tableDataGridView.Columns[1].HeaderText = "Цена";
         }
 
         private void searchTextBox_TextChanged(object sender, EventArgs e)
         {
-            //сделоть тут
+            _sqlWork.FillDataGridViewByQuery(overallDataGridView, "SELECT * FROM DrinksTable WHERE DrinkType LIKE N'%" + searchTextBox.Text + "%'");
         }
 
         private void addButton_Click(object sender, EventArgs e)
