@@ -17,7 +17,8 @@ namespace ProjectX
             {
                 if ((tablesCount > 0) && (tablesCount < 40))
                 {
-                    System.IO.File.WriteAllText(@"../../Settings.cfg", textBox1.Text);
+                    System.IO.File.WriteAllText(@"../../Settings.cfg", textBox1.Text + Environment.NewLine +
+                        MainForm.currentOrderNumber.ToString());
                     MessageBox.Show("Перезапустите программу чтобы изменения вступили в силу!", "Внимание!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 else
