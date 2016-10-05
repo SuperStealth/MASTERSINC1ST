@@ -60,7 +60,7 @@ namespace ProjectX
             settingsForm.Show();
         }
 
-        public DateTime openingTime = DateTime.Now;
+        public static DateTime openingTime = DateTime.Now;
 
         public static int currentOrderNumber;
         public static List<int> orderNumbers = new List<int>();

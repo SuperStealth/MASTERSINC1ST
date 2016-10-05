@@ -108,6 +108,9 @@
     <EmbeddedResource Include="SettingsForm.resx">
       <DependentUpon>SettingsForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SummForm.resx">
+      <DependentUpon>SummForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TableForm.resx">
       <DependentUpon>TableForm.cs</DependentUpon>
     </EmbeddedResource>
