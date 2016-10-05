@@ -30,6 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             this.overallDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.drinksTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.drinksDataSet = new ProjectX.DrinksDataSet();
             this.tableDataGridView = new System.Windows.Forms.DataGridView();
@@ -39,9 +42,7 @@
             this.deleteButton = new System.Windows.Forms.Button();
             this.closeTableButton = new System.Windows.Forms.Button();
             this.drinksTableTableAdapter = new ProjectX.DrinksDataSetTableAdapters.DrinksTableTableAdapter();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sumLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.overallDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.drinksTableBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.drinksDataSet)).BeginInit();
@@ -68,6 +69,28 @@
             this.overallDataGridView.Size = new System.Drawing.Size(243, 254);
             this.overallDataGridView.TabIndex = 0;
             // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Id";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "DrinkType";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Напиток";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "Price";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Цена";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
             // drinksTableBindingSource
             // 
             this.drinksTableBindingSource.DataMember = "DrinksTable";
@@ -89,7 +112,7 @@
             this.tableDataGridView.ReadOnly = true;
             this.tableDataGridView.RowHeadersVisible = false;
             this.tableDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.tableDataGridView.Size = new System.Drawing.Size(304, 254);
+            this.tableDataGridView.Size = new System.Drawing.Size(304, 227);
             this.tableDataGridView.TabIndex = 1;
             // 
             // searchTextBox
@@ -148,27 +171,16 @@
             // 
             this.drinksTableTableAdapter.ClearBeforeFill = true;
             // 
-            // dataGridViewTextBoxColumn1
+            // sumLabel
             // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Id";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "DrinkType";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Напиток";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "Price";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Цена";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.sumLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.sumLabel.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.sumLabel.Location = new System.Drawing.Point(445, 242);
+            this.sumLabel.Name = "sumLabel";
+            this.sumLabel.Size = new System.Drawing.Size(163, 24);
+            this.sumLabel.TabIndex = 8;
+            this.sumLabel.Text = "Сумма:";
+            this.sumLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // TableForm
             // 
@@ -176,6 +188,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(623, 345);
+            this.Controls.Add(this.sumLabel);
             this.Controls.Add(this.closeTableButton);
             this.Controls.Add(this.deleteButton);
             this.Controls.Add(this.addButton);
@@ -213,5 +226,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.Label sumLabel;
     }
 }
