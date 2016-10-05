@@ -53,7 +53,6 @@ namespace ProjectX
                    + DateTime.Now.ToString("yyyy-MM-dd HH:mm") + "', 1," 
                    + MainForm.orderNumbers[tableNumber] +")";
             cmd.ExecuteNonQuery();
-            MessageBox.Show("Добавление прошло успешно!", "Добавление прошло успешно", MessageBoxButtons.OK);
             connection.Close();
             cmd.Dispose();
 
@@ -71,7 +70,6 @@ namespace ProjectX
             cmd.Connection = conn;
             cmd.CommandText = "DELETE FROM [SummTable] WHERE SummTable.Id='" + x1 + "'";
             cmd.ExecuteNonQuery();
-            MessageBox.Show("Запись удалена!", "Удаление", MessageBoxButtons.OK);
             conn.Close();
             RefreshAll();
         }

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.summDataGridView = new System.Windows.Forms.DataGridView();
+            this.печать_button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.summDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -44,11 +45,22 @@
             this.summDataGridView.Size = new System.Drawing.Size(423, 286);
             this.summDataGridView.TabIndex = 0;
             // 
+            // печать_button1
+            // 
+            this.печать_button1.Location = new System.Drawing.Point(291, 305);
+            this.печать_button1.Name = "печать_button1";
+            this.печать_button1.Size = new System.Drawing.Size(128, 23);
+            this.печать_button1.TabIndex = 1;
+            this.печать_button1.Text = "Распечатать отчет";
+            this.печать_button1.UseVisualStyleBackColor = true;
+            this.печать_button1.Click += new System.EventHandler(this.печать_button1_Click);
+            // 
             // SummForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(448, 334);
+            this.Controls.Add(this.печать_button1);
             this.Controls.Add(this.summDataGridView);
             this.Name = "SummForm";
             this.Text = "SummForm";
@@ -60,5 +72,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView summDataGridView;
+        private System.Windows.Forms.Button печать_button1;
     }
 }
